@@ -1,0 +1,135 @@
+*{
+    margin: 10px 0px 20px 0px;
+    padding: 0;
+}
+body{
+    background-color: rgb(17, 17, 17);
+}
+.logo{
+    height: 70px;
+    margin: 10px 10px -2px 10px;
+    width: 75px;
+}
+.Elec{
+    color: white;
+    font-family: French Script MT;
+    font-size: 58px;
+}
+
+body > a {
+    text-decoration: none;
+}
+
+body, a > p {
+    color: white;
+    font-family: Agency FB;
+    margin: 0px 50px 10px 25px;
+    font-size: 20px;
+}
+
+.LogIn{
+    margin-top: 10px;
+    padding: 10px;
+    width: 60%;
+    margin-left: 20%;
+    background-color: goldenrod;
+}
+
+.LogIn:hover{
+    box-shadow: 1px 1px 6px 5px rgba(182, 128, 11, 0.5);
+}
+
+.SUform{
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.box{
+    font-size: 20px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    border: none;
+    cursor: text;
+}
+
+.box:focus{
+    outline: none;
+}
+
+.box:hover{
+    background-color: rgb(247, 230, 199);
+}
+
+.link{
+    color: black;
+    font-family: sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+}
+.link:hover{
+    color: rgb(48, 47, 47);
+}
+code{
+    color: red;
+}
+.submit{
+    border-radius: 40px;
+    border: none;
+    color: goldenrod;
+    background-color: black;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.reset{
+    border-radius: 40px;
+    border: none;
+    color: goldenrod;
+    background-color: black;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.submit:hover, .reset:hover{
+    background-color: rgb(34, 33, 33);
+}
+#phno{
+    text-align: center;
+}
+
+@media (max-width: 700px){
+    .LogIn{
+        width: 96%;
+        margin-left: 2%;
+        padding: 5px;
+    }
+    .logo{
+        align-content: center;
+    }
+    .Elec{
+        text-align: center;
+    }
+    
+    body, a > p {
+        text-align: center;
+    }
+    .SUform{
+        text-align: left;
+        padding: 3px;
+        height: 350px;
+    }
+    .SUform > h2 {
+        text-align: center;
+    }
+    .submit, .reset{
+        width: 48%;
+    }
+    .SU{
+        font-size: 25px;
+    }
+}
+@media (max-width: 400px){
+    .SU{
+        font-size: 15px;
+    }
+}    

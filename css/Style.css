@@ -1,0 +1,607 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+    font-family: sans-serif;
+}
+.top-nav-bar{
+    height: 57px;
+    top: 0;
+    position: sticky;
+    background: #fff;
+    margin-bottom: 0px;
+    border-bottom: 3px solid orange;
+    z-index: 2;
+}
+.logo{
+    height: 40px;
+    margin: 8.5px 17px;
+    width: 70px;
+    border: 1px solid orange;
+}
+.form-control{
+    margin-top: 9px;
+    margin-left: 30px;
+    border:1px solid orange !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius:20px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    box-shadow: none !important;
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #181b1f;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control:focus{
+    outline: none;
+}  
+
+.search-box{
+    display: inline-flex;
+    width: 60% ;
+}
+.input-group-text{
+    border: none;
+    cursor: pointer;
+    background-color: orange !important;
+    border: 1px solid orange !important;
+    margin: 8.5px 10px 3px 0;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius:0px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+}
+
+
+
+.menu-bar{
+    width: 40% ;
+    height: 57px;
+    float: right ;
+}
+.menu-bar ul{
+    display: inline-flex;
+    float: right;
+    height: 60px;
+}
+.menu-bar ul a{
+    border-left: 1px solid #fff;
+    list-style-type: none;
+    text-align: center;
+    padding: 15px 35px;
+    background-color: orange;
+    cursor: pointer;
+    text-decoration: none;
+}
+.menu-bar ul a li{
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+@media (max-width: 980px){
+    .top-nav-bar{
+        height: 118px;
+        border-bottom: 0;
+    }
+    .search-box{
+        width: 100%;
+    }
+    .menu-bar{
+        width: 100%;
+    }
+    .menu-bar ul{
+        width: 100%;
+    }
+    .menu-bar ul a{
+        margin: 0px 0;
+        width: 100%;
+    }
+    .menu-bar ul a li{
+        height: 57px;
+        width: 100%;
+        
+    }
+}
+/*-----------------Side-menu---------------*/
+.side-menu{
+    height: 79%;
+    width: 15%;
+    font-size: 14px;
+    float: left;
+    z-index: 2;
+    background-color: #ddd;
+    margin-top: 0px;
+}
+.side-menu ul{
+    margin-left: 10px;
+}
+.side-menu ul li{
+    list-style-type: none;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.side-menu ul li:hover{
+    color: orange;
+}
+.side-menu ul li ul{
+    display: none;
+    z-index: 10;
+    top: 60px;
+}
+.side-menu ul li:hover ul{
+    display: block;
+    height: 400px;
+    margin-left: 14%;
+    padding: 0 100px 10px 10px;
+    position: fixed;
+    background: #ececec;
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5);
+    margin-top: 0px;
+}
+.angle-right{
+    margin-top: 4px;
+    margin-right: 8px;
+    float: right;
+}
+#close-btn, #menu-btn{
+    font-size: 30px;
+    margin: 10px;
+    color:orange;
+    display:none;
+}
+@media only screen and (max-width: 980px){
+    .side-menu{
+        width: 34%;
+        z-index: 20;
+        top: 133px;
+        position: fixed;
+        font-size: 10px;
+        display: none;
+    }
+    .side-menu ul li ul{
+        top: 133px;
+    }
+    .side-menu ul li:hover ul{
+        margin-left: 31%;
+    }
+    #menu-btn{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+
+
+
+.mySlides {display: none;}
+.img {
+    
+    max-width: 700px;
+    max-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: block;
+}
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 85%;
+    overflow: hidden;
+    height: 490px;
+    background-color: orange;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #0c0b0b;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    display: none;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  @media only screen and (max-width: 980px) {
+      .slideshow-container{
+          width: 100%;
+          height: 400px;
+      }
+      .img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+  @media only screen and (max-width: 450px){
+    .slideshow-container{height: 250px;}
+  }
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+    .slideshow-container{height: 200px; width: 100%;}
+    .img{margin-left: 0%;}
+  }
+
+
+  /*-----Featured-Categories----*/
+.Featured-Categories{
+    margin: 50px 0;
+} 
+.col{
+    width: 10%;
+    height: 200px;
+    transition: 1s;
+    cursor: pointer;
+    padding: 30;
+}
+@media only screen and (max-width: 500px){
+.FP{
+    width: 80%;
+    height: auto;
+}
+}
+
+.FP{
+    padding: 20px 0;
+    
+}
+.FP:hover{
+    transform: scale(1.1);
+}
+.row{
+    text-align: center;
+}
+
+
+/*---Most-selled-Product---*/
+
+.title-box{
+    background-color: orange;
+    color: #fff;
+    width: 180px;
+    padding: 4px 10px;
+    height: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    margin-left: 60px;
+}
+.title-box h2{
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title-box::after{
+    content: '';
+    border-top: 48px solid orange;
+    border-right: 60px solid transparent;
+    position: absolute;
+    display: flex;
+    margin-top: -4px;
+    margin-left: 189px;
+}
+
+
+/*----Product-Top---*/
+
+.col-MSP{
+    float: left;
+    margin-left: 10%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 400px;
+    width: 20%;
+    
+}
+.btn{
+    height: 30px;
+    width: 30px;
+}
+
+.product-top img{
+    width: 100%;
+}
+.product-top{
+    height: 700px;
+}
+.overlay-right{
+    display: block;
+    opacity: 0;
+    position: absolute;
+    margin-block-start: -20%;
+    margin-left: 0;
+    width: 40px;
+}
+.overlay-right .icon{
+    cursor: pointer;
+    background-color: #fff;
+    color: black;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    padding: 7px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+}
+.overlay-right .btn{
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin-top: 25px;
+}
+.product-top:hover .overlay-right{
+    opacity: 1;
+    margin-left: 3%;
+    transition: 0.5s;
+}
+
+
+/*------------Product-Bottom------------*/
+.product-bottom{
+    text-align: center;
+}
+.product-bottom h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.product-bottom h5{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 900px){
+    .col-MSP{
+        float: none;
+        text-align: center;
+        margin-left: 20%;
+        width: 80%;
+    }
+    .product-top img{
+        width: 60%;
+    }
+    .btn{
+        margin-left: 00px;
+    }
+    .overlay-right{
+        margin-block-start: -45%;
+        left: 20%;
+    }
+    .title-box{
+        margin-left: 0px;
+    }
+}
+@media only screen and (max-width: 400px){
+    .overlay-right{
+        margin-block-start: -60%;
+    }
+}
+.rw{
+    margin-bottom: 50px;
+}
+
+/*------Footer-------*/
+.footer{
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(27, 27, 27);
+    color: white;
+    width: 100%;
+    border-top: 3px solid black;
+}
+.roow{
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;    
+}
+.roow p{
+    padding-top: 10px;
+}
+.contner{
+    display: flex;
+    background-color: rgb(27, 27, 27);
+}
+.copyright{
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+.footer hr{
+    margin-top: 10px;
+    background-color: #ccc;
+}
+@media only screen and (max-width: 400px){
+    .roow h1{
+       font-size: 15px;
+    }
+    .roow p{
+        font-size: 10px;
+    }
+    .copyright{
+        font-size: 10px;
+    }
+    .footer{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/*---Product Description---*/
+.rwo{
+    float: left;
+}
+.Specs{
+    float: left;
+    margin-top: 30px;
+    margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+}
+.Specs > p{
+    padding-top: 15px;
+}
+.last{
+    padding-bottom: 15px;
+}
+.Specs .price{
+    color: orange;
+    font-weight: bold;
+    font-size: 20px;
+}
+#qty{
+    border: 1px solid #ccc;
+    font-weight: normal;
+    height: 33px;
+    width: 30px;
+}
+#qty:focus{
+    outline: 1px solid black;
+}
+.ATC{
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 3px;
+}
+.ATC:hover{
+    background-color: rgb(255, 168, 5);
+    box-shadow: 1px 1.5px 5px 1px rgb(0, 0, 4);
+}
+.PRD{
+    padding: 20px;
+}
+.PRD h3{
+    margin-top: 30px;
+    color: orange;
+}
+.PRD p{
+    padding-top: 20px;
+}
+.PRD hr{
+    margin-bottom: 50px;
+    opacity: 0;
+}
+@media only screen and (max-width: 850px){
+    .rwo{
+        float: none;
+    }
+    .Specs{
+        float: none;
+        margin-top: 15px;
+    }
+}
+.cart-page{
+    display: inline-flex;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    font-size: 1.8vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.produc{
+    width: 40%;
+}
+
+.product img {
+    width: 10%;
+    height: 10%;
+    margin-left: 20px;
+}
+
+.products hr{
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: orange;
+    height: 0.1px;
+    border: 0.5px solid orange;
+}
+.prce{
+    width: 15%;
+}
+.quantity{
+    width: 15%;
+}
+.total-cost{
+    width: 20%;
+}
+.mhr{
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: orange;
+    height: 1px;
+    border: 1px solid orange;
+}
+
+.cart-product-container c-icon {
+    font-size: 25px;
+    color: orange;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;    
+    text-align: center;
+    
+}
